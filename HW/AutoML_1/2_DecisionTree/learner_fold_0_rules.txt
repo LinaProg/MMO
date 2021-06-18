@@ -1,0 +1,16 @@
+if (InternetService <= 1.5) and (InternetService <= 0.5) and (PhoneService > 0.5) then response: 64.809 | based on 1,103 samples
+
+if (InternetService <= 1.5) and (InternetService > 0.5) and (StreamingMovies > 1.0) then response: 99.649 | based on 1,102 samples
+
+if (InternetService <= 1.5) and (InternetService > 0.5) and (StreamingMovies <= 1.0) then response: 80.751 | based on 864 samples
+
+if (InternetService > 1.5) and (MultipleLines <= 1.0) and (tenure <= 71.5) then response: 19.951 | based on 753 samples
+
+if (InternetService <= 1.5) and (InternetService <= 0.5) and (PhoneService <= 0.5) then response: 42.038 | based on 437 samples
+
+if (InternetService > 1.5) and (MultipleLines > 1.0) and (tenure <= 70.5) then response: 25.036 | based on 170 samples
+
+if (InternetService > 1.5) and (MultipleLines > 1.0) and (tenure > 70.5) then response: 24.844 | based on 42 samples
+
+if (InternetService > 1.5) and (MultipleLines <= 1.0) and (tenure > 71.5) then response: 20.086 | based on 18 samples
+

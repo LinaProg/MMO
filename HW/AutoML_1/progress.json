@@ -1,0 +1,298 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Baseline",
+            "Linear",
+            "Decision Tree",
+            "Random Forest",
+            "Xgboost",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 2.206623077392578
+            },
+            {
+                "model_name": "1_Baseline",
+                "model_type": "Baseline",
+                "fit_level": "simple_algorithms",
+                "train_time": 0.32585716247558594
+            },
+            {
+                "model_name": "2_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 30.781492948532104
+            },
+            {
+                "model_name": "3_Linear",
+                "model_type": "Linear",
+                "fit_level": "simple_algorithms",
+                "train_time": 2.599842071533203
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.18751788139343262
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "AutoML_1/X.data",
+                    "y_path": "AutoML_1/y.data",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Baseline",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "1_Baseline",
+                "status": "trained",
+                "final_loss": 30.041484001409295,
+                "train_time": 0.5781099796295166,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "gender": [
+                            "categorical_to_int"
+                        ],
+                        "Partner": [
+                            "categorical_to_int"
+                        ],
+                        "Dependents": [
+                            "categorical_to_int"
+                        ],
+                        "PhoneService": [
+                            "categorical_to_int"
+                        ],
+                        "MultipleLines": [
+                            "categorical_to_int"
+                        ],
+                        "InternetService": [
+                            "categorical_to_int"
+                        ],
+                        "OnlineSecurity": [
+                            "categorical_to_int"
+                        ],
+                        "OnlineBackup": [
+                            "categorical_to_int"
+                        ],
+                        "DeviceProtection": [
+                            "categorical_to_int"
+                        ],
+                        "TechSupport": [
+                            "categorical_to_int"
+                        ],
+                        "StreamingTV": [
+                            "categorical_to_int"
+                        ],
+                        "StreamingMovies": [
+                            "categorical_to_int"
+                        ],
+                        "Contract": [
+                            "categorical_to_int"
+                        ],
+                        "PaperlessBilling": [
+                            "categorical_to_int"
+                        ],
+                        "PaymentMethod": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "AutoML_1/X.data",
+                    "y_path": "AutoML_1/y.data",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "mse",
+                    "max_depth": 3,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "2_DecisionTree",
+                "status": "trained",
+                "final_loss": 9.566765322585733,
+                "train_time": 31.353166103363037,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "gender": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Partner": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Dependents": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "tenure": [
+                            "scale_normal"
+                        ],
+                        "PhoneService": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "MultipleLines": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "InternetService": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "OnlineSecurity": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "OnlineBackup": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "DeviceProtection": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "TechSupport": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "StreamingTV": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "StreamingMovies": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Contract": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "PaperlessBilling": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "PaymentMethod": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "scale_log_and_normal"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "AutoML_1/X.data",
+                    "y_path": "AutoML_1/y.data",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "3_Linear",
+                "status": "trained",
+                "final_loss": 36.20865667566728,
+                "train_time": 3.182110071182251,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 9.566765322585733,
+                "train_time": 0.18751788139343262
+            }
+        ]
+    },
+    "adjust_validation": false
+}

@@ -1,0 +1,402 @@
+{
+    "uid": "af78bf66-25b4-46f4-a3cc-25f0b78cb483",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "gender": {
+                            "Female": 0,
+                            "Male": 1
+                        },
+                        "Partner": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "Dependents": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "PhoneService": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "MultipleLines": {
+                            "No": 0,
+                            "No phone service": 1,
+                            "Yes": 2
+                        },
+                        "InternetService": {
+                            "DSL": 0,
+                            "Fiber optic": 1,
+                            "No": 2
+                        },
+                        "OnlineSecurity": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "OnlineBackup": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "DeviceProtection": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "TechSupport": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "StreamingTV": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "StreamingMovies": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "Contract": {
+                            "Month-to-month": 0,
+                            "One year": 1,
+                            "Two year": 2
+                        },
+                        "PaperlessBilling": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "PaymentMethod": {
+                            "Bank transfer (automatic)": 0,
+                            "Credit card (automatic)": 1,
+                            "Electronic check": 2,
+                            "Mailed check": 3
+                        }
+                    },
+                    "columns": [
+                        "gender",
+                        "Partner",
+                        "Dependents",
+                        "PhoneService",
+                        "MultipleLines",
+                        "InternetService",
+                        "OnlineSecurity",
+                        "OnlineBackup",
+                        "DeviceProtection",
+                        "TechSupport",
+                        "StreamingTV",
+                        "StreamingMovies",
+                        "Contract",
+                        "PaperlessBilling",
+                        "PaymentMethod"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        0.4999060882160718,
+                        0.4997602412107683,
+                        0.4576032751270415,
+                        24.575588698292904,
+                        0.29643251004863913,
+                        0.9478500386965857,
+                        0.7393540609035272,
+                        0.8571536481560296,
+                        0.8798175498188306,
+                        0.877998678521626,
+                        0.8579305961870457,
+                        0.8836888228921534,
+                        0.8837525022733135,
+                        0.83355983006632,
+                        0.49110437319801703,
+                        1.0649415383332483
+                    ],
+                    "mean": [
+                        0.5096903541991535,
+                        0.4845177099576743,
+                        0.29850746268656714,
+                        32.31855647137447,
+                        0.9026509244820673,
+                        0.9349521051459122,
+                        0.8759189128981956,
+                        0.7848073067498329,
+                        0.9166852305636,
+                        0.8993094230340833,
+                        0.787926041434618,
+                        0.9893071953664513,
+                        0.9986633994208064,
+                        0.6941412341278681,
+                        0.5938961906883493,
+                        1.5807529516596124
+                    ],
+                    "var": [
+                        0.24990609703549496,
+                        0.24976029869504532,
+                        0.20940075740699488,
+                        603.9595598676619,
+                        0.08787223301373653,
+                        0.8984196958571189,
+                        0.5466444273745366,
+                        0.7347123765471906,
+                        0.7740789209692105,
+                        0.7708816794857217,
+                        0.7360449078738597,
+                        0.7809059357045198,
+                        0.7810184852743429,
+                        0.6948219903001922,
+                        0.24118350537421718,
+                        1.1341004800675856
+                    ],
+                    "n_samples_seen": 4489,
+                    "n_features_in": 16,
+                    "columns": [
+                        "gender",
+                        "Partner",
+                        "Dependents",
+                        "tenure",
+                        "PhoneService",
+                        "MultipleLines",
+                        "InternetService",
+                        "OnlineSecurity",
+                        "OnlineBackup",
+                        "DeviceProtection",
+                        "TechSupport",
+                        "StreamingTV",
+                        "StreamingMovies",
+                        "Contract",
+                        "PaperlessBilling",
+                        "PaymentMethod"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    1.2510802027126946
+                ],
+                "mean": [
+                    3.381801291659239
+                ],
+                "var": [
+                    1.565201673619637
+                ],
+                "n_samples_seen": 4489,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    18.25
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "gender": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Partner": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Dependents": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "tenure": [
+                        "scale_normal"
+                    ],
+                    "PhoneService": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "MultipleLines": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "InternetService": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "OnlineSecurity": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "OnlineBackup": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "DeviceProtection": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "TechSupport": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "StreamingTV": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "StreamingMovies": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "Contract": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "PaperlessBilling": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "PaymentMethod": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.1",
+            "algorithm_name": "Linear Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "8ade7cce-556b-4aa1-aeb6-63e016a4e2d6",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "gender": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Partner": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Dependents": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "tenure": [
+                    "scale_normal"
+                ],
+                "PhoneService": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "MultipleLines": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "InternetService": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "OnlineSecurity": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "OnlineBackup": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "DeviceProtection": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "TechSupport": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "StreamingTV": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "StreamingMovies": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "Contract": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "PaperlessBilling": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "PaymentMethod": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "AutoML_1/X.data",
+            "y_path": "AutoML_1/y.data",
+            "results_path": "AutoML_1"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear/learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear/predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 36.20865667566728,
+    "train_time": 2.599842071533203,
+    "is_stacked": false
+}

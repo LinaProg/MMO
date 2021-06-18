@@ -1,0 +1,95 @@
+{
+    "columns": [
+        "gender",
+        "SeniorCitizen",
+        "Partner",
+        "Dependents",
+        "tenure",
+        "PhoneService",
+        "MultipleLines",
+        "InternetService",
+        "OnlineSecurity",
+        "OnlineBackup",
+        "DeviceProtection",
+        "TechSupport",
+        "StreamingTV",
+        "StreamingMovies",
+        "Contract",
+        "PaperlessBilling",
+        "PaymentMethod"
+    ],
+    "rows": 5986,
+    "cols": 17,
+    "target_is_numeric": true,
+    "columns_info": {
+        "gender": [
+            "categorical",
+            "few_categories"
+        ],
+        "SeniorCitizen": [],
+        "Partner": [
+            "categorical",
+            "few_categories"
+        ],
+        "Dependents": [
+            "categorical",
+            "few_categories"
+        ],
+        "tenure": [
+            "scale"
+        ],
+        "PhoneService": [
+            "categorical",
+            "few_categories"
+        ],
+        "MultipleLines": [
+            "categorical",
+            "few_categories"
+        ],
+        "InternetService": [
+            "categorical",
+            "few_categories"
+        ],
+        "OnlineSecurity": [
+            "categorical",
+            "few_categories"
+        ],
+        "OnlineBackup": [
+            "categorical",
+            "few_categories"
+        ],
+        "DeviceProtection": [
+            "categorical",
+            "few_categories"
+        ],
+        "TechSupport": [
+            "categorical",
+            "few_categories"
+        ],
+        "StreamingTV": [
+            "categorical",
+            "few_categories"
+        ],
+        "StreamingMovies": [
+            "categorical",
+            "few_categories"
+        ],
+        "Contract": [
+            "categorical",
+            "few_categories"
+        ],
+        "PaperlessBilling": [
+            "categorical",
+            "few_categories"
+        ],
+        "PaymentMethod": [
+            "categorical",
+            "few_categories"
+        ]
+    },
+    "target_info": [
+        "scale_log"
+    ],
+    "n_features": 17,
+    "is_sample_weighted": false
+}

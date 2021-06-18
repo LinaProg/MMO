@@ -1,0 +1,271 @@
+{
+    "uid": "ba5aff74-2681-417e-b2c2-c651026d0837",
+    "name": "2_DecisionTree",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "gender": {
+                            "Female": 0,
+                            "Male": 1
+                        },
+                        "Partner": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "Dependents": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "PhoneService": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "MultipleLines": {
+                            "No": 0,
+                            "No phone service": 1,
+                            "Yes": 2
+                        },
+                        "InternetService": {
+                            "DSL": 0,
+                            "Fiber optic": 1,
+                            "No": 2
+                        },
+                        "OnlineSecurity": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "OnlineBackup": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "DeviceProtection": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "TechSupport": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "StreamingTV": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "StreamingMovies": {
+                            "No": 0,
+                            "No internet service": 1,
+                            "Yes": 2
+                        },
+                        "Contract": {
+                            "Month-to-month": 0,
+                            "One year": 1,
+                            "Two year": 2
+                        },
+                        "PaperlessBilling": {
+                            "No": 0,
+                            "Yes": 1
+                        },
+                        "PaymentMethod": {
+                            "Bank transfer (automatic)": 0,
+                            "Credit card (automatic)": 1,
+                            "Electronic check": 2,
+                            "Mailed check": 3
+                        }
+                    },
+                    "columns": [
+                        "gender",
+                        "Partner",
+                        "Dependents",
+                        "PhoneService",
+                        "MultipleLines",
+                        "InternetService",
+                        "OnlineSecurity",
+                        "OnlineBackup",
+                        "DeviceProtection",
+                        "TechSupport",
+                        "StreamingTV",
+                        "StreamingMovies",
+                        "Contract",
+                        "PaperlessBilling",
+                        "PaymentMethod"
+                    ]
+                }
+            ],
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "gender": [
+                        "categorical_to_int"
+                    ],
+                    "Partner": [
+                        "categorical_to_int"
+                    ],
+                    "Dependents": [
+                        "categorical_to_int"
+                    ],
+                    "PhoneService": [
+                        "categorical_to_int"
+                    ],
+                    "MultipleLines": [
+                        "categorical_to_int"
+                    ],
+                    "InternetService": [
+                        "categorical_to_int"
+                    ],
+                    "OnlineSecurity": [
+                        "categorical_to_int"
+                    ],
+                    "OnlineBackup": [
+                        "categorical_to_int"
+                    ],
+                    "DeviceProtection": [
+                        "categorical_to_int"
+                    ],
+                    "TechSupport": [
+                        "categorical_to_int"
+                    ],
+                    "StreamingTV": [
+                        "categorical_to_int"
+                    ],
+                    "StreamingMovies": [
+                        "categorical_to_int"
+                    ],
+                    "Contract": [
+                        "categorical_to_int"
+                    ],
+                    "PaperlessBilling": [
+                        "categorical_to_int"
+                    ],
+                    "PaymentMethod": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.1",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "7ed1666b-c330-40e1-951d-343b2e403bc4",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "criterion": "mse",
+                "max_depth": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "gender": [
+                    "categorical_to_int"
+                ],
+                "Partner": [
+                    "categorical_to_int"
+                ],
+                "Dependents": [
+                    "categorical_to_int"
+                ],
+                "PhoneService": [
+                    "categorical_to_int"
+                ],
+                "MultipleLines": [
+                    "categorical_to_int"
+                ],
+                "InternetService": [
+                    "categorical_to_int"
+                ],
+                "OnlineSecurity": [
+                    "categorical_to_int"
+                ],
+                "OnlineBackup": [
+                    "categorical_to_int"
+                ],
+                "DeviceProtection": [
+                    "categorical_to_int"
+                ],
+                "TechSupport": [
+                    "categorical_to_int"
+                ],
+                "StreamingTV": [
+                    "categorical_to_int"
+                ],
+                "StreamingMovies": [
+                    "categorical_to_int"
+                ],
+                "Contract": [
+                    "categorical_to_int"
+                ],
+                "PaperlessBilling": [
+                    "categorical_to_int"
+                ],
+                "PaymentMethod": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "AutoML_1/X.data",
+            "y_path": "AutoML_1/y.data",
+            "results_path": "AutoML_1"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "criterion": "mse",
+            "max_depth": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "2_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_DecisionTree/learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "2_DecisionTree/predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 9.566765322585733,
+    "train_time": 30.781492948532104,
+    "is_stacked": false
+}
